@@ -4,7 +4,8 @@
     (camerasFound)="onCamerasFound($event)"
     [device]="selectedDevice"
     (scanSuccess)="onCodeResult($event)"
-    (scanComplete)="onScanComplete($event)"
+    [torch]="torch"
+    (torchCompatible)="onTorchCompatible($event)"
   ></zxing-scanner>
 </div>
 <p>{{ codeResult }}</p>

@@ -12,6 +12,7 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
 export class SalesComponent {
   selectedDevice!: MediaDeviceInfo;
   codeResult: string = '';
+  torch: boolean = false;
 
   onCamerasFound(devices: MediaDeviceInfo[]) {
     console.log(devices);
@@ -23,7 +24,8 @@ export class SalesComponent {
     console.log(data);
     this.codeResult = data;
   }
-  onScanComplete(data: any) {
+  onTorchCompatible(data: any) {
     console.log(data);
+    this.torch = data;
   }
 }
