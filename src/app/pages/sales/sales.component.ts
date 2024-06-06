@@ -11,6 +11,8 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
 })
 export class SalesComponent {
   selectedDevice!: MediaDeviceInfo;
+  codeResult: string = '';
+
   onCamerasFound(devices: MediaDeviceInfo[]) {
     console.log(devices);
     this.selectedDevice = devices[0];
@@ -19,6 +21,7 @@ export class SalesComponent {
 
   onCodeResult(data: any) {
     console.log(data);
+    this.codeResult = data;
   }
   onScanComplete(data: any) {
     console.log(data);
