@@ -1,0 +1,9 @@
+<div class="header" [ngClass]="{ 'not-home': !mainPage }">
+  @if (!mainPage) {
+
+  <a class="header__menuButton">
+    <mat-icon>menu</mat-icon>
+  </a>
+  }
+  <h2 class="header__title">My App</h2>
+</div>

@@ -1,0 +1,14 @@
+<div class="sales">
+  <zxing-scanner
+    [enable]="true"
+    (camerasFound)="onCamerasFound($event)"
+    [device]="selectedDevice"
+    (scanSuccess)="onCodeResult($event)"
+    (scanComplete)="onScanComplete($event)"
+  ></zxing-scanner>
+</div>
+
+<div class="salesData">
+  <p>codigo / descripcion / unidad / precio/ cantidad</p>
+</div>
+<a [routerLink]="['/main']">Volver</a>

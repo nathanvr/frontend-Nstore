@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  text-decoration: none;
+}
+
+a,
+Link {
+  text-decoration: none;
+  color: var(--typo);
+}
+
+button {
+  border: none;
+  background: none;
+  font-family: var(--font-family);
+}

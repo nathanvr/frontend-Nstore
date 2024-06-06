@@ -1,0 +1,28 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 3rem;
+  background-color: rgb(210, 210, 210);
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 5px 0 10px black;
+
+  &__button {
+    position: absolute;
+    left: 0;
+  }
+
+  &__title {
+    flex: 1;
+    text-align: center;
+    color: var(--blue);
+  }
+
+  // Muestra el botón en cualquier ruta que no sea el home
+  &.not-home &__title {
+    position: relative;
+    right: 12px;
+  }
+}

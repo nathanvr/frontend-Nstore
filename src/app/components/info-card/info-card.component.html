@@ -1,0 +1,12 @@
+<div class="card">
+  <a [routerLink]="[cardInfo.path]">
+    <div class="card__header">
+      <h2 class="card__header__title">
+        <fa-icon [icon]="cardInfo.icon"></fa-icon> {{ cardInfo.title }}
+      </h2>
+      <h3 class="card__header__subtitle">{{ cardInfo.subtitle }}</h3>
+    </div>
+
+    <div class="card__body">{{ cardInfo.body }}</div>
+  </a>
+</div>

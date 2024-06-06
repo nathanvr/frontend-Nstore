@@ -1,0 +1,19 @@
+.card {
+  width: 15rem;
+  height: 15rem;
+  padding: 0.5rem;
+  border: 1px solid var(--gray);
+  border-radius: 0.5rem;
+  box-shadow: 5px 5px 10px gray;
+  &__header {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      margin: 0 auto;
+      color: var(--blue);
+    }
+    &__subtitle {
+      color: var(--ligthBlue);
+    }
+  }
+}

@@ -1,0 +1,15 @@
+:host zxing-scanner::ng-deep video {
+  width: 80vw;
+
+  height: 10vh;
+}
+
+zxing-scanner {
+  width: 80vw;
+}
+
+.sales {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

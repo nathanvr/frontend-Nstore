@@ -1,0 +1,11 @@
+.home {
+  display: flex;
+  gap: 1rem 1rem;
+  padding: 0 1rem;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  @media (max-width: 523px) {
+    justify-content: center;
+  }
+}
