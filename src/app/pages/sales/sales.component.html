@@ -6,6 +6,7 @@
     (scanSuccess)="onCodeResult($event)"
     [torch]="torch"
     (torchCompatible)="onTorchCompatible($event)"
+    [formats]="allowedFormats"
   ></zxing-scanner>
 </div>
 <p>{{ codeResult }}</p>
