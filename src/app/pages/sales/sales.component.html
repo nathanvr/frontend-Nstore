@@ -1,17 +1,40 @@
 <div class="sales">
-  <zxing-scanner
-    [enable]="true"
-    (camerasFound)="onCamerasFound($event)"
-    [device]="selectedDevice"
-    (scanSuccess)="onCodeResult($event)"
-    [torch]="torch"
-    (torchCompatible)="onTorchCompatible($event)"
-    [formats]="allowedFormats"
-  ></zxing-scanner>
-</div>
-<p>{{ codeResult }}</p>
+  @if (scannerAvailable) {
+  <div class="sales__scanner">
+    <zxing-scanner
+      [enable]="true"
+      (camerasFound)="onCamerasFound($event)"
+      [device]="selectedDevice"
+      (scanSuccess)="onCodeResult($event)"
+      [torch]="torchOn"
+      (torchCompatible)="onTorchCompatible($event)"
+      [formats]="allowedFormats"
+    ></zxing-scanner>
 
-<div class="salesData">
-  <p>codigo / descripcion / unidad / precio/ cantidad</p>
+    <div class="sales__scanner__options">
+      <select [formControl]="selectDeviceForm" name="deviceSelec" id="device">
+        @for (item of devicesList; track item.deviceId) {
+        <option value="item">{{ item.label }}</option>
+        }
+      </select>
+
+      @if (torchAvailable) {
+      <button>
+        <fa-icon [icon]="lintern"></fa-icon>
+      </button>
+
+      }
+      <button>
+        <fa-icon [icon]="camera"></fa-icon>
+      </button>
+    </div>
+    <p>{{ codeResult }}</p>
+  </div>
+
+  }
+
+  <div class="salesData">
+    <p>codigo / descripcion / unidad / precio/ cantidad</p>
+  </div>
+  <a [routerLink]="['/main']">Volver</a>
 </div>
-<a [routerLink]="['/main']">Volver</a>
