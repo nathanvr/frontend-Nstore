@@ -35,7 +35,7 @@ export class SalesComponent {
 
   ngOnInit() {
     this.selectDeviceForm.valueChanges.subscribe((res) => {
-      console.log(res);
+      this.selectedDevice = res;
     });
   }
 
